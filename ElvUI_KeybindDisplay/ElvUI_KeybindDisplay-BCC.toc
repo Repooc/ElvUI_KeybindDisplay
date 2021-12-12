@@ -1,0 +1,10 @@
+﻿## Interface: 20502
+## Title: |cFFFFFFFFKeybind|r|cFF16C3F2Display|r
+## Author: Repooc
+## Version: 1.0
+## RequiredDeps: ElvUI
+## DefaultState: Enabled
+
+Profile.lua
+Core.lua
+Options.lua
