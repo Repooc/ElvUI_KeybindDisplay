@@ -157,10 +157,16 @@ function KD:UpdateButtonDB(specific)
 	end
 end
 
+local function UpdateDB()
+	KD.db = E.db.kd
+	KD:UpdateButtonDB('PEW')
+end
+
 function KD:Initialize()
 	EP:RegisterPlugin(AddOnName, GetOptions)
 	KD.db = E.db.kd
 
+	hooksecurefunc(E, 'UpdateDB', UpdateDB)
 	hooksecurefunc(AB, 'FixKeybindText', KD.FixKeybindText)
 	KD:UpdateButtonDB('PEW')
 end
