@@ -1,4 +1,6 @@
 ﻿## Interface: 90105
+## Interface-BCC: 20502
+## Interface-Classic: 11401
 ## Title: |cFFFFFFFFKeybind|r|cFF16C3F2Display|r
 ## Author: Repooc
 ## Version: 1.0
