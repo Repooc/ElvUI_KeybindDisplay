@@ -1,7 +1,7 @@
-﻿## Interface: 20502
+﻿## Interface: 20503
 ## Title: |cFFFFFFFFKeybind|r|cFF16C3F2Display|r
 ## Author: Repooc
-## Version: 1.1
+## Version: 1.02
 ## RequiredDeps: ElvUI
 ## DefaultState: Enabled
 ## X-Curse-Project-ID: 557231

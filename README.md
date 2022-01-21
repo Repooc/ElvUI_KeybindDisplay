@@ -11,4 +11,4 @@
 - [x] Ability to set which keybind to display if you have more than one set for a button
 - [x] Ability to allow the keybind text to use the whole width of the button to display the text instead of being truncated
 
-![Demo Image](https://i.imgur.com/BHQv9MH.png)
+![Demo Image](https://i.imgur.com/QgKZwcs.png)
