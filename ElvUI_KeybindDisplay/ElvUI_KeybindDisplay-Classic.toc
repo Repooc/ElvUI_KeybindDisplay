@@ -1,4 +1,4 @@
-﻿## Interface: 11401
+﻿## Interface: 11403
 ## Title: |cFFFFFFFFKeybind|r|cFF16C3F2Display|r
 ## Author: Repooc
 ## Version: 1.02
