@@ -28,7 +28,7 @@ jobs:
         with:
           id: ${{ secrets.DISCORD_WEBHOOK_ID }}
           token: ${{ secrets.DISCORD_WEBHOOK_TOKEN }}
-          title: New ElvUI SplitActionBars Released
-          description: ElvUI SplitActionBars version ${{ env.RELEASE_VERSION }} has been released.  You can use your wow addon client that can download from wago addons or curse to update.
+          title: New ElvUI KeybindDisplay Released
+          description: ElvUI KeybindDisplay version ${{ env.RELEASE_VERSION }} has been released.  You can use your wow addon client that can download from wago addons or curse to update.
           footer: Addons by Repooc
           timestamp: true
