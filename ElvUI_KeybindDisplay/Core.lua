@@ -76,7 +76,6 @@ KD.barDefaults = {
 	}
 }
 
-local oldWidth
 
 local function GetOptions()
 	for _, func in pairs(KD.Configs) do
@@ -87,6 +86,7 @@ end
 function KD:FixKeybindText(button)
 	if not button then return end
 	local hotkey = button.HotKey
+	local oldWidth
 
 	local binding, currentText
 	if button.keyBoundTarget then
