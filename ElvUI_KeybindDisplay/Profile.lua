@@ -25,6 +25,14 @@ for i = 1, 10 do
 			}
 		end
 	end
+	if i >= 5 or i <= 7 then
+		for j = 1, 12 do
+			P.kd.binding['MULTIACTIONBAR'..i..'BUTTON'..j] = {
+				hotKey = -1,
+				noTruncate = false,
+			}
+		end
+	end
 	P.kd.binding['BONUSACTIONBUTTON'..i] = {
 		bar = 'petbar',
 		hotKey = -1,
@@ -36,6 +44,7 @@ for i = 1, 10 do
 		noTruncate = false,
 	}
 end
+
 for i = 1, 12 do
 	P.kd.binding['ACTIONBUTTON'..i] = {
 		bar = 'bar1',
@@ -46,4 +55,7 @@ for i = 1, 12 do
 	P.kd.binding['MULTIACTIONBAR2BUTTON'..i].bar = 'bar5'
 	P.kd.binding['MULTIACTIONBAR3BUTTON'..i].bar = 'bar3'
 	P.kd.binding['MULTIACTIONBAR4BUTTON'..i].bar = 'bar4'
+	P.kd.binding['MULTIACTIONBAR5BUTTON'..i].bar = 'bar13'
+	P.kd.binding['MULTIACTIONBAR6BUTTON'..i].bar = 'bar14'
+	P.kd.binding['MULTIACTIONBAR7BUTTON'..i].bar = 'bar15'
 end

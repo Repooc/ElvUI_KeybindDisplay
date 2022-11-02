@@ -147,7 +147,12 @@ local function configTable()
 		local Bar = ACH:Group(L["Bar "]..i, nil, i, 'group', nil, nil)
 		E.Options.args.kd.args.playerbars.args['bar'..i] = Bar
 	end
-
+	if E.Retail then
+		for i = 13, 15 do
+			local Bar = ACH:Group(L["Bar "]..i, nil, i, 'group', nil, nil)
+			E.Options.args.kd.args.playerbars.args['bar'..i] = Bar
+		end
+	end
 	for bar, values in next, KD.barDefaults do
 		if bar == 'stancebar' or bar == 'petbar' then
 			SetupButtonOptions(bar, values.binding, values.buttons)
