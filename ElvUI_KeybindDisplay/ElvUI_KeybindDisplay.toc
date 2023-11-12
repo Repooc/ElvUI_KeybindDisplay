@@ -6,6 +6,7 @@
 ## DefaultState: Enabled
 ## X-Curse-Project-ID: 557231
 ## X-Wago-ID: 5bGo2YK0
+## IconTexture: Interface\AddOns\ElvUI_KeybindDisplay\Logo
 
 Profile.lua
 Core.lua
