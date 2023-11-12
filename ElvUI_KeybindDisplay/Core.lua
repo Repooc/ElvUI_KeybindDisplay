@@ -154,8 +154,8 @@ function KD:FixKeybindText(button)
 			currentText = gsub(currentText, 'NEQUALS', 'N=')
 		end
 
-		if KD.db.replacements[currentText] then
-			currentText = KD.db.replacements[currentText]
+		if E.db.kd.replacements[currentText] then
+			currentText = E.db.kd.replacements[currentText]
 		end
 
 		hotkey:SetText(currentText)
