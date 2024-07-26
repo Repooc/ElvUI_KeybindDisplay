@@ -1,7 +1,9 @@
-﻿## Interface: 100200
-## Title: |cFFFFFFFFKeybind|r|cFF16C3F2Display|r
+﻿## Interface: 110000
+## Interface-Cata: 40400
+## Interface-Classic: 11503
+## Title: |cff1784d1ElvUI|r |cff00FF98Keybind|r |cffA330C9Display|r
 ## Author: Repooc
-## Version: 1.06
+## Version: 1.07
 ## RequiredDeps: ElvUI
 ## DefaultState: Enabled
 ## X-Curse-Project-ID: 557231

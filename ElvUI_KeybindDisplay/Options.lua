@@ -1,7 +1,7 @@
 local KD, E, L, V, P, G = unpack(select(2, ...))
+local ACH = E.Libs.ACH
 local AB = E.ActionBars
 
-local ACH
 local selectedHotKey, selectedNewText
 local tempTextReplacement = {}
 
@@ -43,10 +43,10 @@ local function SetupButtonOptions(barType, binding, numButtons, isPlayerBars)
 
 		if isPlayerBars then
 			HotKey = ACH:Select(L["Button "]..i, nil, i, getValues, nil, nil, getButtonSetting, setButtonSetting)
-			E.Options.args.kd.args.playerbars.args[barType].args[''..i] = HotKey
+			KD.Options.args.playerbars.args[barType].args[''..i] = HotKey
 		else
 			HotKey = ACH:Select(L["Button "]..i, nil, i, getValues, nil, nil, getButtonSetting, setButtonSetting)
-			E.Options.args.kd.args[barType].args[''..i] = HotKey
+			KD.Options.args[barType].args[''..i] = HotKey
 		end
 	end
 end
@@ -62,7 +62,7 @@ local function AddNewText()
 		selectedNewText = tempTextReplacement.newText
 		KD:UpdateButtonDB('PEW')
 
-		E.Options.args.kd.args.general.args.textreplacegroup.args.textreplaceoptions.name = format(L["Search for: |cff33ff33%s|r"], selectedHotKey)
+		KD.Options.args.general.args.textreplacegroup.args.textreplaceoptions.name = format(L["Search for: |cff33ff33%s|r"], selectedHotKey)
 		tempTextReplacement.originalText = ''
 		tempTextReplacement.newText = ''
 	end
@@ -96,7 +96,7 @@ local function TextReplaceGroup()
 	function(_, value)
 		selectedHotKey = value
 		selectedNewText = E.db.kd.replacements[selectedHotKey]
-		E.Options.args.kd.args.general.args.textreplacegroup.args.textreplaceoptions.name = format(L["Search for: |cff33ff33%s|r"], selectedHotKey)
+		KD.Options.args.general.args.textreplacegroup.args.textreplaceoptions.name = format(L["Search for: |cff33ff33%s|r"], selectedHotKey)
 	end, disabled, hidden)
 
 	local TextReplaceOptions = ACH:Group('', desc, 8, childGroups, get, set, disabled, function() return selectedHotKey == '' end)
@@ -123,10 +123,15 @@ local function TextReplaceGroup()
 end
 
 local function configTable()
-	ACH = E.Libs.ACH
-
 	local kd = ACH:Group('|cFFFFFFFFKeybind|r|cFF16C3F2Display|r', nil, 6, 'tab', nil, nil, function() return not AB.Initialized end)
-	E.Options.args.kd = kd
+	local rrp = E.Options.args.rrp
+	if rrp then
+		E.Options.args.rrp.args.kd = kd
+		KD.Options = E.Options.args.rrp.args.kd
+	else
+		E.Options.args.kd = kd
+		KD.Options = E.Options.args.kd
+	end
 
 	local General = ACH:Group(L["General"], nil, 9, 'tree', nil, nil, function() return not AB.Initialized or _G.ElvUI_KeyBinder.active end)
 	kd.args.general = General
@@ -145,12 +150,12 @@ local function configTable()
 
 	for i = 1, 10 do
 		local Bar = ACH:Group(L["Bar "]..i, nil, i, 'group', nil, nil)
-		E.Options.args.kd.args.playerbars.args['bar'..i] = Bar
+		kd.args.playerbars.args['bar'..i] = Bar
 	end
 	if E.Retail then
 		for i = 13, 15 do
 			local Bar = ACH:Group(L["Bar "]..i, nil, i, 'group', nil, nil)
-			E.Options.args.kd.args.playerbars.args['bar'..i] = Bar
+			kd.args.playerbars.args['bar'..i] = Bar
 		end
 	end
 	for bar, values in next, KD.barDefaults do
