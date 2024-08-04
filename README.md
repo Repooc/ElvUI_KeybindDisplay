@@ -1,3 +1,11 @@
+[![Discord](https://img.shields.io/discord/1162274244487561216?style=for-the-badge&logo=discord&label=Discord)](https://repoocreforged.dev/discord) [![GitHub Repo stars](https://img.shields.io/github/stars/repooc/ElvUI_ActionBarBuddy?style=for-the-badge&logo=github)](https://github.com/Repooc/ElvUI_ActionBarBuddy)
+
+# **ActionBar Buddy *(ElvUI Plugin)***
+[![CurseForge Game Versions](https://img.shields.io/curseforge/game-versions/614378?style=for-the-badge&logo=curseforge)](https://curseforge.com/wow/addons/actionbar-buddy-elvui-plugin) [![Version (CF)](https://img.shields.io/curseforge/v/614378?style=for-the-badge&logo=curseforge)](https://curseforge.com/wow/addons/actionbar-buddy-elvui-plugin) [![GitHub tag (with filter)](https://img.shields.io/github/v/tag/Repooc/ElvUI_ActionBarBuddy?logo=github&label=Version&style=for-the-badge)](https://github.com/Repooc/ElvUI_ActionBarBuddy/tags)
+
+
+[![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://www.patreon.com/repoocreforged) [![ko-fi](https://img.shields.io/badge/_-KO--FI-red?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/repoocreforged) 
+
 # Keybind Display (ElvUI Plugin)
 
 **Do you wish you could change that 'SHIFT-6' keybind to show as 'Sh-6' instead of 'S6' that ElvUI displays?**  
@@ -7,6 +15,7 @@
 ### Well now you are able to address these with this AddOn that is an ElvUI Plugin.
 
 ## Keybind Display (ElvUI Plugin) Key Features
+- [x] Ability to add color to the text (example: N2 with the N as red; |cffFF0000N|r2)
 - [x] Ability to search and replace keybind text
 - [x] Ability to set which keybind to display if you have more than one set for a button
 - [x] Ability to allow the keybind text to use the whole width of the button to display the text instead of being truncated
