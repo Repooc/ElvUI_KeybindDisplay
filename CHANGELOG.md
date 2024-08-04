@@ -1,3 +1,3 @@
-v1.06 11/11/2023
+v1.08 8/4/2024
 
-• toc bump for all wow flavors
+• toc bump and fixes
