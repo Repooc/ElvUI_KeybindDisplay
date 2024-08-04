@@ -116,7 +116,7 @@ local function TextReplaceGroup()
 	end)
 
 	TextReplaceOptions.args.edit = ACH:Execute(ColorizeName(L['Edit'], '33ff33'), nil, 2, function() E.db.kd.replacements[selectedHotKey] = selectedNewText; KD:UpdateButtonDB('PEW') end, nil, nil, 'full', get, nil, function() local disabled = not selectedHotKey or not selectedNewText or (selectedHotKey == selectedNewText) return disabled end, function() return E.db.kd.replacements[selectedHotKey] == selectedNewText end)
-	TextReplaceOptions.args.delete = ACH:Execute(ColorizeName(L['Delete'], 'ff3333'), nil, 3, function() E.db.kd.replacements[selectedHotKey] = nil selectedHotKey = '' selectedNewText = '' KD:UpdateButtonDB('PEW') E.Options.args.kd.args.general.args.textreplacegroup.args.textreplaceoptions.name = '' end, nil, function() return L["Are you sure you want to delete this?"] end, 'full')
+	TextReplaceOptions.args.delete = ACH:Execute(ColorizeName(L['Delete'], 'ff3333'), nil, 3, function() E.db.kd.replacements[selectedHotKey] = nil selectedHotKey = '' selectedNewText = '' KD:UpdateButtonDB('PEW') KD.Options.args.general.args.textreplacegroup.args.textreplaceoptions.name = '' end, nil, function() return L["Are you sure you want to delete this?"] end, 'full')
 	options.args.header3 = ACH:Header('', 9)
 
 	return options
