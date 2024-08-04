@@ -94,6 +94,8 @@ if E.Retail then
 	}
 end
 
+local function escapeSequence(a) return format('|%s', a) end
+
 local function GetOptions()
 	for _, func in pairs(KD.Configs) do
 		func()
@@ -158,6 +160,7 @@ function KD:FixKeybindText(button)
 
 		if E.db.kd.replacements[currentText] then
 			currentText = E.db.kd.replacements[currentText]
+			currentText = currentText:gsub('||([TCRAtncra])', escapeSequence)
 		end
 
 		hotkey:SetText(currentText)
