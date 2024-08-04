@@ -64,6 +64,21 @@ KD.barDefaults = {
 		binding = 'ELVUIBAR10BUTTON',
 		buttons = 12,
 	},
+	bar13 = {
+		locale = L["Bar 13"],
+		binding = 'MULTIACTIONBAR5BUTTON',
+		buttons = 12,
+	},
+	bar14 = {
+		locale = L["Bar 14"],
+		binding = 'MULTIACTIONBAR6BUTTON',
+		buttons = 12,
+	},
+	bar15 = {
+		locale = L["Bar 15"],
+		binding = 'MULTIACTIONBAR7BUTTON',
+		buttons = 12,
+	},
 	petbar = {
 		locale = L["Pet Bar"],
 		binding = 'BONUSACTIONBUTTON',
@@ -76,23 +91,6 @@ KD.barDefaults = {
 	}
 }
 
-if E.Retail then
-	KD.barDefaults.bar13 = {
-		locale = L["Bar 13"],
-		binding = 'MULTIACTIONBAR5BUTTON',
-		buttons = 12,
-	}
-	KD.barDefaults.bar14 = {
-		locale = L["Bar 14"],
-		binding = 'MULTIACTIONBAR6BUTTON',
-		buttons = 12,
-	}
-	KD.barDefaults.bar15 = {
-		locale = L["Bar 15"],
-		binding = 'MULTIACTIONBAR7BUTTON',
-		buttons = 12,
-	}
-end
 
 local function escapeSequence(a) return format('|%s', a) end
 

@@ -152,11 +152,9 @@ local function configTable()
 		local Bar = ACH:Group(L["Bar "]..i, nil, i, 'group', nil, nil)
 		kd.args.playerbars.args['bar'..i] = Bar
 	end
-	if E.Retail then
-		for i = 13, 15 do
-			local Bar = ACH:Group(L["Bar "]..i, nil, i, 'group', nil, nil)
-			kd.args.playerbars.args['bar'..i] = Bar
-		end
+	for i = 13, 15 do
+		local Bar = ACH:Group(L["Bar "]..i, nil, i, 'group', nil, nil)
+		kd.args.playerbars.args['bar'..i] = Bar
 	end
 	for bar, values in next, KD.barDefaults do
 		if bar == 'stancebar' or bar == 'petbar' then
