@@ -11,5 +11,6 @@
 ## IconTexture: Interface\AddOns\ElvUI_KeybindDisplay\Logo
 
 Profile.lua
+Libs\Load_Libs.xml
 Core.lua
 Options.lua
