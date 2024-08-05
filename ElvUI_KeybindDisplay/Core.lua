@@ -15,88 +15,65 @@ _G[AddOnName] = Engine
 KD.Configs = {}
 KD.barDefaults = {
 	bar1 = {
-		locale = L["Bar 1"],
-		binding = 'ACTIONBUTTON',
-		buttons = 12,
+		locale = L["Bar 1"], binding = 'ACTIONBUTTON', buttons = 12,
 	},
 	bar2 = {
-		locale = L["Bar 2"],
-		binding = 'ELVUIBAR2BUTTON',
-		buttons = 12,
+		locale = L["Bar 2"], binding = 'ELVUIBAR2BUTTON', buttons = 12,
 	},
 	bar3 = {
-		locale = L["Bar 3"],
-		binding = 'MULTIACTIONBAR3BUTTON',
-		buttons = 12,
+		locale = L["Bar 3"], binding = 'MULTIACTIONBAR3BUTTON', buttons = 12,
 	},
 	bar4 = {
-		locale = L["Bar 4"],
-		binding = 'MULTIACTIONBAR4BUTTON',
-		buttons = 12,
+		locale = L["Bar 4"], binding = 'MULTIACTIONBAR4BUTTON', buttons = 12,
 	},
 	bar5 = {
-		locale = L["Bar 5"],
-		binding = 'MULTIACTIONBAR2BUTTON',
-		buttons = 12,
+		locale = L["Bar 5"], binding = 'MULTIACTIONBAR2BUTTON', buttons = 12,
 	},
 	bar6 = {
-		locale = L["Bar 6"],
-		binding = 'MULTIACTIONBAR1BUTTON',
-		buttons = 12,
+		locale = L["Bar 6"], binding = 'MULTIACTIONBAR1BUTTON', buttons = 12,
 	},
 	bar7 = {
-		locale = L["Bar 7"],
-		binding = 'ELVUIBAR7BUTTON',
-		buttons = 12,
+		locale = L["Bar 7"], binding = 'ELVUIBAR7BUTTON', buttons = 12,
 	},
 	bar8 = {
-		locale = L["Bar 8"],
-		binding = 'ELVUIBAR8BUTTON',
-		buttons = 12,
+		locale = L["Bar 8"], binding = 'ELVUIBAR8BUTTON', buttons = 12,
 	},
 	bar9 = {
-		locale = L["Bar 9"],
-		binding = 'ELVUIBAR9BUTTON',
-		buttons = 12,
+		locale = L["Bar 9"], binding = 'ELVUIBAR9BUTTON', buttons = 12,
 	},
 	bar10 = {
-		locale = L["Bar 10"],
-		binding = 'ELVUIBAR10BUTTON',
-		buttons = 12,
+		locale = L["Bar 10"], binding = 'ELVUIBAR10BUTTON', buttons = 12,
 	},
 	bar13 = {
-		locale = L["Bar 13"],
-		binding = 'MULTIACTIONBAR5BUTTON',
-		buttons = 12,
+		locale = L["Bar 13"], binding = 'MULTIACTIONBAR5BUTTON', buttons = 12,
 	},
 	bar14 = {
-		locale = L["Bar 14"],
-		binding = 'MULTIACTIONBAR6BUTTON',
-		buttons = 12,
+		locale = L["Bar 14"], binding = 'MULTIACTIONBAR6BUTTON', buttons = 12,
 	},
 	bar15 = {
-		locale = L["Bar 15"],
-		binding = 'MULTIACTIONBAR7BUTTON',
-		buttons = 12,
+		locale = L["Bar 15"], binding = 'MULTIACTIONBAR7BUTTON', buttons = 12,
 	},
 	petbar = {
-		locale = L["Pet Bar"],
-		binding = 'BONUSACTIONBUTTON',
-		buttons = 10,
+		locale = L["Pet Bar"], binding = 'BONUSACTIONBUTTON', buttons = 10,
 	},
 	stancebar = {
-		locale = L["Stance Bar"],
-		binding = 'SHAPESHIFTBUTTON',
-		buttons = 10,
+		locale = L["Stance Bar"], binding = 'SHAPESHIFTBUTTON', buttons = 10,
 	}
 }
-
 
 local function escapeSequence(a) return format('|%s', a) end
 
 local function GetOptions()
 	for _, func in pairs(KD.Configs) do
 		func()
+	end
+end
+
+function KD:isModifierColored()
+	if E:IsAddOnEnabled('ElvUI_EltreumUI') and E.db.ElvUI_EltreumUI.skins.colormodkey then
+		return true
+	else
+		return false
 	end
 end
 
