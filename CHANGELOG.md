@@ -1,3 +1,3 @@
-v1.10 8/13/2024
+v1.11 8/13/2024
 
-• bump toc
+• remove old test func

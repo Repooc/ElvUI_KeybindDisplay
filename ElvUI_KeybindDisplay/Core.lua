@@ -69,14 +69,6 @@ local function GetOptions()
 	end
 end
 
-function KD:isModifierColored()
-	if E:IsAddOnEnabled('ElvUI_EltreumUI') and E.db.ElvUI_EltreumUI.skins.colormodkey then
-		return true
-	else
-		return false
-	end
-end
-
 function KD:FixKeybindText(button)
 	if not button then return end
 	local hotkey = button.HotKey
