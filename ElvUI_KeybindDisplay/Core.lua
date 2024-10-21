@@ -157,7 +157,7 @@ function KD:Initialize()
 
 	hooksecurefunc(E, 'UpdateDB', UpdateDB)
 	hooksecurefunc(AB, 'FixKeybindText', KD.FixKeybindText)
-	KD:UpdateButtonDB('PEW')
+	AB:UpdateButtonSettings()
 	LibStub('RepoocReforged-1.0'):LoadMainCategory()
 end
 
