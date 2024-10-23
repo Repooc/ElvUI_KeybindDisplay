@@ -1,3 +1,4 @@
-v1.11 8/13/2024
+v1.12 10/22/2024
 
-• remove old test func
+• bump toc
+• fix issue with having a gamepad + using custom keybind text
