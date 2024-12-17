@@ -1,4 +1,3 @@
-v1.12 10/22/2024
+v1.13 12/17/2024
 
 • bump toc
-• fix issue with having a gamepad + using custom keybind text
