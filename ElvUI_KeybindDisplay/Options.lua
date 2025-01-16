@@ -123,7 +123,7 @@ local function TextReplaceGroup()
 end
 
 local function configTable()
-	local kd = ACH:Group('|cFFFFFFFFKeybind|r|cFF16C3F2Display|r', nil, 6, 'tab', nil, nil, function() return not AB.Initialized end)
+	local kd = ACH:Group(gsub(KD.Title, "^.-|r%s", ""), nil, 6, 'tab', nil, nil, function() return not AB.Initialized end)
 	local rrp = E.Options.args.rrp
 	if rrp then
 		E.Options.args.rrp.args.kd = kd

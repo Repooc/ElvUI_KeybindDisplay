@@ -13,6 +13,7 @@ Engine[6] = G
 _G[AddOnName] = Engine
 
 KD.Configs = {}
+KD.Title = C_AddOns.GetAddOnMetadata(AddOnName, 'Title')
 KD.barDefaults = {
 	bar1 = {
 		locale = L["Bar 1"], binding = 'ACTIONBUTTON', buttons = 12,
