@@ -1,3 +1,3 @@
-v1.14 1/15/2025
+v1.15 1/20/2025
 
-• bump toc
+• [Fix] When reloading/logging in, the selected keybind from the Player Bars section now follows the option
