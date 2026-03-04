@@ -1,7 +1,7 @@
-﻿## Interface: 110200, 50500, 11507
+﻿## Interface: 120001, 50503, 20505, 11508
 ## Title: |cff1784d1ElvUI|r |cff00FF98Keybind|r |cffA330C9Display|r
 ## Author: Repooc
-## Version: 1.3
+## Version: 1.4
 ## RequiredDeps: ElvUI
 ## DefaultState: Enabled
 ## X-Curse-Project-ID: 557231
